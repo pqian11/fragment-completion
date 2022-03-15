@@ -1,0 +1,27 @@
+human agreement_emb-subj-long          1.0 7/7 6/6
+human agreement_subj-long              0.9230769230769231 7/7 5/6
+human agreement_subj-with-coord        0.3076923076923077 4/7 0/6
+human agreement_subj-with-PP           0.8461538461538461 6/7 5/6
+human agreement_subj                   0.9230769230769231 7/7 5/6
+human clause_VP-gerund                 0.6153846153846154 6/7 2/6
+human clause_VP-with-PP-adjunct        1.0 7/7 6/6
+human clause_VP-with-adjunct-long      1.0 7/7 6/6
+human clause_VP-with-complement-long   0.6923076923076923 5/7 4/6
+human clause_VP-with-complement        1.0 7/7 6/6
+human clause_VP                        0.7692307692307693 7/7 3/6
+human clause_phrasal-verb-with-subj    0.8461538461538461 6/7 5/6
+human clause_phrasal-verb              1.0 7/7 6/6
+human clause_resultative-long          0.7692307692307693 6/7 4/6
+human clause_resultative               0.7692307692307693 6/7 4/6
+human coord_S                          0.6153846153846154 7/7 1/6
+human coord_VP                         0.8461538461538461 5/7 6/6
+human coord_either                     0.6923076923076923 5/7 4/6
+human coord_emb-NP                     0.7692307692307693 7/7 3/6
+human coord_emb-VP                     0.8461538461538461 7/7 4/6
+human coord_gap-NP                     1.0 7/7 6/6
+human coord_neither                    0.46153846153846156 3/7 3/6
+human gap_adjunct                      0.6153846153846154 6/7 2/6
+human gap_obj                          0.9230769230769231 7/7 5/6
+human gap_phrasal-verb                 0.8461538461538461 7/7 4/6
+human gap_subj                         1.0 7/7 6/6
+
