@@ -68,6 +68,8 @@ def plot_rs_by_test_suite_grid_5_by_6(rs, models, human_data, test_names, model2
     ax.spines['bottom'].set_visible(False)
     ax.legend(loc = 'center', bbox_to_anchor=(-1.2, 0.5), ncol=2, fontsize=12)
 
+    fig.text(0.06, 0.5, 'Test Accuracy Score', ha='center', va='center', rotation='vertical')
+
     if add_test_name:
         textstr = '\n'.join(['({}) {}'.format(k+1, test_name2pretty_name[test_name]) for k, test_name in enumerate(test_names)])
         props = dict(boxstyle='round,pad=0.5', facecolor='white', alpha=0.5, ec='lightgray')
@@ -130,6 +132,8 @@ def plot_rs_by_test_suite_grid_3_by_9(rs, models, human_data, test_names, model2
         row_id = index // n_col
         col_id = index % n_col
         axs[row_id, col_id].set_axis_off()
+
+    fig.text(0.08, 0.5, 'Test Accuracy Score', ha='center', va='center', rotation='vertical')
 
     if savepath is not None:
         plt.savefig(savepath, bbox_inches='tight')
