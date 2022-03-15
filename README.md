@@ -14,7 +14,7 @@ The script `src/gibbs_complete.py` implement the algorithm. To fill in the blank
 python src/gibbs_complete.py --fpath $INPUT --n_sample 1000 --batch_size 100 --rerank
 ```
 
-### Train masked language model component from scratch for GibbsComplete:
+Train masked language model component from scratch for GibbsComplete:
 
 ```
 python src/masked_lm.py --do_train --lr ${LR} --batch_size ${BATCH_SIZE} --epoch ${N_EPOCHS} --train_data ${TRAIN_DATA} --dev_data ${DEV_DATA} --save_path ${MODEL_PATH} --report 1000 --sample_every 10000
@@ -27,25 +27,22 @@ python src/gibbs_complete.py --fpath $INPUT --n_sample 1000 --batch_size 100 --o
 ```
 
 ## ILM, InfillT5, InfillBART
-### Fine-tune pretrained models on sentence infilling task.
+To fine-tune pretrained models on sentence infilling task:
 
 ```
 python src/infill.py --seed ${SEED} --model_type ${MODEL_TYPE} --lr ${LR} --do_train --batch_size ${BATCH_SIZE} --epochs ${N_EPOCHS} --save_path ${MODEL_PATH} --train_data ${TRAIN_DATA} --dev_data ${DEV_DATA} --report 1000 --sample_every 5000
 ```
 
-### Fill in the blanks:
-
-The commandline argument can take the value, `gpt2`, `t5`, and `bart`, which correspond to ILM, InfillT5, InfillBART respectively.
-
-```
-python src/infill.py --model_type ${MODEL_TYPE} --restore_from ${MODEL_PARAMS} --fpath $INPUT --max_len 50 --do_test --n_sample 35 --n_output 35
-```
-
-
-### Train models from scratch:
+To train models from scratch on the sentence infilling task:
 
 ```
 python src/infill.py --seed ${SEED} --model_type ${MODEL_TYPE} --lr ${LR} --do_train --batch_size ${BATCH_SIZE} --epochs ${N_EPOCHS} --save_path ${MODEL_PATH} --train_data ${TRAIN_DATA} --dev_data ${DEV_DATA} --report 1000 --sample_every 5000 --random_init
+```
+
+The following command uses trained models to generate completions. The commandline argument can take the value, `gpt2`, `t5`, and `bart`, which correspond to ILM, InfillT5, InfillBART respectively.
+
+```
+python src/infill.py --model_type ${MODEL_TYPE} --restore_from ${MODEL_PARAMS} --fpath $INPUT --max_len 50 --do_test --n_sample 35 --n_output 35
 ```
 
 ## Plot figures
@@ -56,9 +53,9 @@ n the `figs` folder.
 
 ```
 cd analysis
-mkdir -p figs/exp0
-mkdir -p figs/exp1
-mkdir -p figs/exp2
+mkdir -p fig/exp0
+mkdir -p fig/exp1
+mkdir -p fig/exp2
 
 # Plot the figure for Evaluation I
 python exp0_analysis.py
