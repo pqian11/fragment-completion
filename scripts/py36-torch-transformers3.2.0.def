@@ -1,0 +1,19 @@
+Bootstrap: docker
+From: nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
+
+%post
+    apt-get update && apt-get -y install locales
+    locale-gen en_US.UTF-8
+    apt-get install -y git wget
+    apt-get install -y python3.6
+    apt-get install -y python3-pip build-essential cmake mercurial
+    apt-get clean
+    
+    pip3 install --upgrade pip --no-cache-dir
+    pip3 install -Iv nltk==3.6.2 --no-cache-dir
+    pip3 install numpy scipy matplotlib pandas cython zss conllu --no-cache-dir
+    pip3 install -Iv torch==1.7.1 torchvision==0.8.2 --no-cache-dir
+    pip3 install -Iv transformers==3.2.0 --no-cache-dir
+    pip3 install ipython --no-cache-dir
+    pip3 install ipdb --no-cache-dir
+

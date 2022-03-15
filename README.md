@@ -4,7 +4,7 @@ This repository accompanies the paper, Flexible Generation from Fragmentary Ling
 
 ## Environment
 
-The following Singularity definition file is used to build the container for running the code for model training and inference.
+The Singularity definition file `scripts/py36-torch-transformers3.2.0.def` can be used to build the container for running the code for model training and inference.
 
 ## GibbsComplete
 
