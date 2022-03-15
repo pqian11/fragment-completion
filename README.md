@@ -1,6 +1,6 @@
 # Flexible Generation from Fragmentary Linguistic Input
 
-This repository accompanies the paper, Flexible Generation from Fragmentary Linguistic Input, published in ACL 2022. It includes the implementation of fine-tuning pretrained models or training models from scratch on a text infilling task, as well as GibbsComplete, an algorithm that combines masked and autpregressive language models to fill in the blanks in a sentence. It also includes the experimental materials used in the evaluations in the paper.
+This repository accompanies the paper, Flexible Generation from Fragmentary Linguistic Input, to appear at ACL 2022. It includes the implementation of fine-tuning pretrained models or training models from scratch on a text infilling task, as well as GibbsComplete, an algorithm that combines masked and autpregressive language models to fill in the blanks in a sentence. It also includes the experimental materials used in the evaluations in the paper.
 
 ## Environment
 
