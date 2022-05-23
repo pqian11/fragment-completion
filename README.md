@@ -1,6 +1,6 @@
 # Flexible Generation from Fragmentary Linguistic Input
 
-This repository accompanies the paper, Flexible Generation from Fragmentary Linguistic Input, to appear at ACL 2022. It includes the implementation of fine-tuning pretrained models or training models from scratch on a text infilling task, as well as GibbsComplete, an algorithm that combines masked and autpregressive language models to fill in the blanks in a sentence. It also includes the experimental materials used in the evaluations in the paper.
+This repository accompanies the paper, [Flexible Generation from Fragmentary Linguistic Input](https://aclanthology.org/2022.acl-long.563/), published at ACL 2022. It includes the implementation of fine-tuning pretrained models or training models from scratch on a text infilling task, as well as GibbsComplete, an algorithm that combines masked and autpregressive language models to fill in the blanks in a sentence. It also includes the experimental materials used in the evaluations in the paper.
 
 ## Environment
 
@@ -47,9 +47,7 @@ python src/infill.py --model_type ${MODEL_TYPE} --restore_from ${MODEL_PARAMS} -
 
 ## Plot figures
 
-The `analysis` folder contains the code and data for generating the figures in t
-he paper. The following commands run the plotting scripts and generate figures i
-n the `figs` folder.
+The `analysis` folder contains the code and data for generating the figures in the paper. The following commands run the plotting scripts and generate figures in the `figs` folder.
 
 ```
 cd analysis
@@ -68,4 +66,7 @@ python exp1_analysis.py --rerank
 python exp2_analysis.py
 python exp2_analysis.py --rerank
 ```
+
+## Acknowledgement
+We thank [bert-gen](https://github.com/nyu-dl/bert-gen) repository for providing a basis for our implementation.
 
